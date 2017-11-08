@@ -12,7 +12,7 @@
     'author': "Linserv",
     'website': "https://www.linserv.se",
     'category': "Sales",
-    'version': "10.0.0.1",
+    'version': "11.0.0.1",
     'depends': ["base", "product", ],
     'data': [
     ],
