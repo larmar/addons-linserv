@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="view_delivery_carrier_form_with_provider_bring" model="ir.ui.view">
+        <field name="name">delivery.carrier.form.provider.bring</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='destination']" position="before">
+                <page string="Bring Configuration" attrs="{'invisible': [('delivery_type', '!=', 'bring')]}">
+                    <group>
+                        <group>
+                            <field name="bring_api_key" attrs="{'required': [('delivery_type', '=', 'bring')]}"/>
+                            <field name="bring_api_uid" attrs="{'required': [('delivery_type', '=', 'bring')]}"/>
+                            <field name="bring_client_url" attrs="{'required': [('delivery_type', '=', 'bring')]}"/>
+                        </group>
+                        <group>
+                            <field name="product_id" attrs="{'required': [('delivery_type', '=', 'bring')]}"/>
+                            <field name="customerNdumber" attrs="{'required': [('delivery_type', '=', 'bring')]}"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
